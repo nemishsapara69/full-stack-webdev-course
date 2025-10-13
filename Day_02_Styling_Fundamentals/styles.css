@@ -1,0 +1,36 @@
+/* 1. ELEMENT SELECTOR (Targets all <h1> tags) */
+h1 {
+    color: #333399; /* Dark Blue Text */
+    text-align: center; /* Center the text */
+}
+
+/* 2. CLASS SELECTOR (Targets the element with class="intro-text") */
+
+.intro-text {
+    font-weight: bold; /* Makes the text bold */
+    font-size: 18px;
+    color: green;
+}
+
+/* 3. ID SELECTOR & THE BOX MODEL (Targets the element with id="box-model-example") */
+
+#box-model-example {
+    /* --- Box Model Properties --- */
+    
+    /* 1. CONTENT AREA */
+    width: 300px; 
+    height: 100px; 
+    
+    /* 2. PADDING (Space INSIDE the border) */
+    padding: 20px; /* 20px all around */
+    
+    /* 3. BORDER */
+    border: 5px solid #ff6600; /* Orange solid border */
+    
+    /* 4. MARGIN (Space OUTSIDE the border) */
+    margin: 30px auto; /* 30px top/bottom, 'auto' centers the block element horizontally */
+    
+    /* Other Styles */
+    background-color: #f0f8ff; /* Very light blue background */
+    text-align: center;
+}
