@@ -1,0 +1,46 @@
+/* General Styling for readability */
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+/* Styles for the Flex Items (the boxes themselves) */
+.flex-item {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: 2px solid #388E3C;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    width: 80px; /* Give items a base size */
+    height: 80px;
+}
+
+/* -------------------------------------- */
+/* FLEXBOX CORE PROPERTIES */
+/* -------------------------------------- */
+
+.flex-container {
+    display: flex; /* *** THIS IS WHAT TURNS IT INTO A FLEX CONTAINER *** */
+    
+    /* Change how items align on the main axis (usually horizontal) */
+    justify-content: space-around; /* Try: center, flex-start, flex-end, space-between */
+    
+    /* Change how items align on the cross axis (usually vertical) */
+    align-items: center; /* Try: flex-start, flex-end, stretch */
+    
+    /* Change the flow direction (e.g., stack them vertically) */
+    flex-direction: row; /* Try: column */
+    
+    /* Optional: Give the container a border so you can see its boundaries */
+    border: 3px dashed #333;
+    height: 200px; /* Give the container a fixed height to see align-items work */
+    margin-bottom: 20px;
+}
+
+/* You can target individual items to see how 'order' works */
+.item-2 {
+    /* This item will visually appear first, regardless of its HTML order */
+    order: 1; 
+    background-color: #f44336; /* Red */
+}
