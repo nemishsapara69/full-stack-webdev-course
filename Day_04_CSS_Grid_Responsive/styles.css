@@ -1,0 +1,77 @@
+/* General Styling */
+body {
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: 2px solid #0056b3;
+    padding: 15px;
+    text-align: center;
+}
+
+/* -------------------------------------- */
+/* CSS GRID CORE PROPERTIES (For Desktop View) */
+/* -------------------------------------- */
+.grid-container {
+    display: grid; /* *** THIS TURNS IT INTO A GRID CONTAINER *** */
+    
+    /* Define 3 columns: The first two are equal, the third takes remaining space */
+    grid-template-columns: 1fr 1fr auto; 
+    
+    /* Define rows and where items start/end (spanning 2 columns for Header/Footer) */
+    grid-template-rows: auto 1fr auto;
+    
+    gap: 10px; /* Space between grid cells */
+    
+    border: 3px solid black;
+    height: 300px; /* Fixed height for visual clarity */
+}
+
+/* Manually placing items on the grid */
+.header {
+    grid-column: 1 / span 3; /* Start at line 1, span across all 3 columns */
+}
+.sidebar {
+    grid-row: 2; /* Start in the second row */
+    grid-column: 1;
+}
+.main-content {
+    grid-row: 2; /* Start in the second row */
+    grid-column: 2 / span 2; /* Start in column 2 and span 2 columns (covering 2 and 3) */
+}
+.footer {
+    grid-column: 1 / span 3; /* Span across all 3 columns */
+}
+
+
+/* -------------------------------------- */
+/* BASIC RESPONSIVE DESIGN: MEDIA QUERY */
+/* -------------------------------------- */
+/* This CSS only applies when the screen width is 600px or LESS */
+@media (max-width: 600px) {
+    
+    /* 1. Change the Grid Layout for small screens */
+    .grid-container {
+        /* Stack everything into a single column */
+        grid-template-columns: 1fr; 
+        height: auto; /* Let the height adjust automatically */
+    }
+    
+    /* 2. Reset the placement of items */
+    .header, .sidebar, .main-content, .footer {
+        grid-column: 1; /* Make all items take up the full single column */
+        grid-row: auto; /* Reset row positioning */
+    }
+    
+    /* 3. Change Responsive Text Styling */
+    .responsive-text {
+        background-color: #ffc107; /* Yellow */
+        color: #333;
+        padding: 15px;
+        text-align: center;
+        font-size: 14px; /* Smaller font on mobile */
+    }
+}
